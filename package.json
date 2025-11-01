@@ -1,0 +1,29 @@
+{
+  "name": "wb-tariffs-service",
+  "version": "1.0.0",
+  "description": "Service for WB tariffs synchronization with Google Sheets",
+  "main": "src/app.ts",
+  "scripts": {
+    "start": "ts-node src/app.ts",
+    "dev": "ts-node --watch src/app.ts",
+    "build": "tsc",
+    "migrate": "knex migrate:latest",
+    "migrate:make": "knex migrate:make -x ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "cron": "^2.3.0",
+    "dotenv": "^16.3.1",
+    "googleapis": "^126.0.1",
+    "knex": "^2.5.1",
+    "pg": "^8.11.3"
+  },
+  "devDependencies": {
+    "@types/cron": "^2.0.1",
+    "@types/node": "^20.5.0",
+    "@types/pg": "^8.10.5",
+    "typescript": "^5.1.6",
+    "ts-node": "^10.9.1"
+  }
+}
